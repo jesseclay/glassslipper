@@ -39,10 +39,9 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/test', test.view);
-app.get('/project/:name', project.viewProject);
+app.get('/project/:name/:image_url', project.viewProject);
 // Example route
 // app.get('/users', user.list);
-
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

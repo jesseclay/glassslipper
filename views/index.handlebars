@@ -22,10 +22,7 @@
 	<div class="container">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
-		</div>
+		{{> jumbotron}}
 		
 		<ol>
 			{{#each projects}}
@@ -39,8 +36,8 @@
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
 		{{#each projects}}
 		<div class="project" id="{{id}}">
-			<a href="project/{{name}}" class="thumbnail">
-				<img src="images/{{image}}" alt="Lorem Pixel image" class="img">
+			<a href="project/{{name}}/{{image}}" class="thumbnail">
+				{{> projectThumbnail}}
 				<p>{{name}}</p>
 			</a>
 		</div>

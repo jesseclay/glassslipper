@@ -1,0 +1,206 @@
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*
+Author: pixek
+Author URL: pixek.com
+Description: Help File Template
+Version: 2.0.0
+Tags: black, white
+*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////// Customized Framework Css Rules Start                                                               */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+body {
+	background: url(../images/bgPat.png) 0 0;
+}
+p > a, a {
+	color: #65C178;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////// Customized Framework Css Rules End                                                                 */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////// Structure Css Rules Start                                                                          */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.websiteWrapper {
+	width: 984px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 48px;
+	margin-bottom: 48px;
+	overflow: visible;
+}
+.pageWrapper {
+	padding: 48px;
+	padding-bottom: 24px;
+	background-color: #fff;
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.03);
+	-webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.03);
+	-moz-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.03);
+}
+.pageWrapper > *:last-child {
+	margin-bottom: 0px;
+}
+.logoContactWrapper {
+	height: 104px;
+	background: url(../images/pageBreakerBg.png) 0 bottom repeat-x;
+	margin-bottom: 23px;
+	clear: both;
+}
+.mainLogo {
+	background: url(../images/mainLogo.png) 0 0 no-repeat;
+	height: 54px;
+	width: 164px;
+	float: left;
+}
+.contactOptionsWrapper {
+	float: right;
+	height: 24px;
+	margin-top: 15px;
+}
+.contactOption {
+	float: left;
+	margin-left: 27px;
+	line-height: 24px;
+	height: 24px;
+	padding-left: 36px;
+	color: #333;
+}
+.supportOption {
+	background: url(../images/supportIconBg24.png) 0 0 no-repeat;
+}
+.projectsOption {
+	background: url(../images/portfolioIconBg24.png) 0 0 no-repeat;
+}
+.previewOption {
+	background: url(../images/previewIconBg24.png) 0 0 no-repeat;
+}
+.itemDetailsWrapper {
+	padding-bottom: 29px;
+	background: url(../images/pageBreakerBg.png) 0 bottom repeat-x;
+	margin-bottom: 27px;
+}
+.itemInfo {
+	padding-left: 28px;
+	margin-right: 27px;
+	height: 16px;
+	line-height: 16px;
+	display: block;
+	overflow: hidden;
+	float: left;
+}
+.itemType {
+	background: url(../images/itemTypeIconBg16.png) 0 0 no-repeat;
+}
+.itemVersion {
+	background: url(../images/itemVersionIconBg16.png) 0 0 no-repeat;
+}
+.mainMenuWrapper {
+	padding-bottom: 2px;
+	background: url(../images/pageBreakerBg.png) 0 bottom repeat-x;
+	margin-bottom: 23px;
+}
+.mainMenu {
+	width: 924px;
+}
+.menuItem {
+	border-left: 3px solid #f0f0f0;
+	background: #f6f6f6 url(../images/infoIconBg16.png) 11px center no-repeat;
+	height: 36px;
+	line-height: 36px;
+	color: #333;
+	padding-left: 38px;
+	width: 385px;
+	text-transform: capitalize;
+	float: left;
+	margin-right: 36px;
+	margin-bottom: 27px;
+}
+.menuItem:hover {
+	text-decoration: none;
+}
+.sectionWrapper {
+	margin-bottom: 23px;
+	background: url(../images/pageBreakerBg.png) 0 bottom repeat-x;
+	padding-bottom: 6px;
+}
+.sectionTitleWrapper {
+	height: 18px;
+}
+.sectionTitle {
+	text-transform: capitalize;
+	display: block;
+	overflow: hidden;
+	float: left;
+	height: 18px;
+}
+.creditWrapper {
+	padding-left: 22px;
+	background: url(../images/creditIconBg16.png) 0 center no-repeat;
+	margin-left: 12px;
+}
+.listItemWrapper {
+	padding-left: 22px;
+	background: url(../images/creditIconBg16.png) 0 center no-repeat;
+	margin-left: 12px;
+}
+.codeWrapper {
+	padding-top: 4px;
+	margin-bottom: 23px;
+}
+pre {
+	background: url(../images/codeBg.png) 0 0 repeat;
+	padding-left: 12px;
+	padding-right: 12px;
+	border: 1px dotted #e3e3e3;
+	overflow-x: auto;
+}
+.backToTopButton {
+	display: block;
+	overflow: hidden;
+	height: 18px;
+	line-height: 18px;
+	background: url(../images/backToTopBg.png) right 0px no-repeat;
+	padding-right: 17px;
+	float: right;
+	color: #999;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.backToTopButton:hover {
+	background-position: right -18px;
+	color: #666;
+}
+.copyrightWrapper {
+}
+.copyright {
+	display: block;
+	overflow: hidden;
+	padding-top: 2px;
+	float: left;
+	height: 14px;
+	line-height: 14px;
+}
+.terms {
+	float: right;
+	height: 14px;
+	line-height: 14px;
+	color: #333;
+}
+.pageBreak {
+	background: url(../images/pageBreakerBg.png) 0 0 repeat-x;
+	height: 2px;
+	margin-bottom: 27px;
+	clear: both;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////// Structure Css Rules End                                                                            */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

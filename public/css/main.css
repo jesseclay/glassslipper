@@ -1,0 +1,21 @@
+#shoeSearchArea {
+  padding-top: 18em;
+  text-align: center;
+}
+
+.shoeSearchForm {
+  padding-top: 5px;
+}
+
+.shoeSearchLabel {
+  padding-bottom: 5px;
+}
+
+.shoeSearchInput {
+  padding: 10px 5px 0px 0px;
+  margin: 5px 5px 0px 0px;
+}
+
+.shoeSearchSubmit {
+  margin-top: 20px;
+}

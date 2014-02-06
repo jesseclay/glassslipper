@@ -9,8 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var test = require('./routes/test');
-var project = require('./routes/project');
+var searchResults = require('./routes/searchResults');
 // Example route
 // var user = require('./routes/user');
 
@@ -28,6 +27,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
+// app.use(express.bodyParser());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -38,8 +38,9 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/test', test.view);
-app.get('/project/:name/:image_url', project.viewProject);
+app.get('/results', searchResults.showResults);
+// app.get('/test', test.view);
+// app.get('/project/:name/:image_url', project.viewProject);
 // Example route
 // app.get('/users', user.list);
 http.createServer(app).listen(app.get('port'), function(){

@@ -39,10 +39,11 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/', index.landing);
+app.get('/search', index.search);
 app.get('/results', searchResults.showResults);
-app.get('/addShoe', addShoe.view); 
-app.get('/about', about.view); 
+app.get('/addShoe', addShoe.view);
+app.get('/about', about.view);
 // app.get('/test', test.view);
 // app.get('/project/:name/:image_url', project.viewProject);
 // Example route

@@ -232,7 +232,7 @@ jQuery(document).ready(function($){
 	// lightbox functions start
 	function lightbox(){
 		
-		$('.portfolioOneExpandButton, .portfolioFilterableExpandButton, .singleProjectExpandButton').colorbox({
+		$('.portfolioFilterableExpandButton, .singleProjectExpandButton').colorbox({
 		
 			maxWidth: windowWidth,
 			initialWidth: lightboxInitialWidth,

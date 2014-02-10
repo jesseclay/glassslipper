@@ -728,10 +728,17 @@ a.nivo-prevNav:hover {
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 22px;
+	text-align: center;
 }
 .portfolioOneItemInfoWrapper > *:last-child {
 	margin-bottom: 0px;
 }
+#resultSize {
+	padding-top: 10px;
+	font-weight: 900;
+	font-size: 300%
+}
+
 .portfolioOneItemTitle {
 	margin-bottom: 16px;
 	height: 18px;

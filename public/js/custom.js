@@ -219,8 +219,9 @@ jQuery(document).ready(function($){
 	
 	// nivo slider functions start
 	$('#mainSlider').nivoSlider({
-		
+		effect: 'random',
 		controlNav: false,
+		directionNav: false,
 		prevText: '',
         nextText: '' 
 		

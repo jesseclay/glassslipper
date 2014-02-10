@@ -223,7 +223,7 @@ jQuery(document).ready(function($){
 		controlNav: false,
 		directionNav: false,
 		prevText: '',
-        nextText: '' 
+    nextText: '' 
 		
 	});
 	// nivo slider functions end

@@ -8,7 +8,7 @@ exports.showResults = function(req, res) {
   res.render('result', {
     'brand': brand,
     'size': size,
-    'image_url' : '/images/brands/aqauzzura-logo.jpg',
+    'image_url' : '/images/brands/bearpaw.png',
     'all_brands': shoe_data["shoe_brands"]
   });
 };

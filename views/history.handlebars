@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GlassSlipper Shoe Search</title>
+<title>GlassSlipper History</title>
 <!-- meta tags start -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
@@ -32,7 +32,7 @@
 
 <!-- JavaScript files start -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
- <script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- added type, update path -->
 <script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
@@ -45,7 +45,7 @@
   
   <!-- main menu wrapper starts -->
   <ul class="mainMenuWrapper">
-    <li><a href="/search">Size Search</a></li>
+    <li class="currentPage"><a href="/search">Size Search</a></li>
     <li><a href="/about">About</a> </li>
   </ul>
   <!-- main menu wrapper ends --> 
@@ -55,32 +55,3 @@
     <div class="headerWrapper"> <a href="" class="mainMenuButton"><span>Menu</span></a></div>
   </div>
   <!-- header wrapper ends -->
-  
-  <!-- page wrapper starts -->
-  <div class="pageWrapper landingPageWrapper">
-    <div class="container-fluid">
-    <div class="row" id="shoeSearchArea">
-      <div class="col-xs-12">
-        <form class="form-horizontal shoeSearchForm" action="/" method="get">
-          <fieldset>          
-              <div class="control-group">
-                  <label class="control-label shoeSearchLabel">Add the Brand:</label>
-                  <input type="text" class="form-control" id="description" placeholder="Description" name="description">
-            </fieldset>
-            <input type="submit" id="shoeSearchSubmit" class="btn btn-info btn-lg" value="Add Brand!">
-        </form>
-      </div>
-    </div>
-    </div>
-  </div>
-  <!-- page wrapper ends --> 
-  
-  <!-- footer wrapper starts -->
-  <div class="footerWrapper landingFooterWrapper"> 
-  </div>
-  <!-- footer wrapper ends --> 
-  
-</div>
-<!-- website wrapper ends -->
-</body>
-</html>

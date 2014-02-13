@@ -9,9 +9,12 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
+var login = require('./routes/login'); 
 var searchResults = require('./routes/searchResults');
+var history = require('./routes/history');
 var addShoe = require('./routes/addShoe');  
 var about = require('./routes/about'); 
+
 // Example route
 // var user = require('./routes/user');
 
@@ -40,10 +43,13 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.landing);
+app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/results', searchResults.showResults);
+app.get('/history', history.view);
 app.get('/addShoe', addShoe.view);
 app.get('/about', about.view);
+
 // app.get('/test', test.view);
 // app.get('/project/:name/:image_url', project.viewProject);
 // Example route

@@ -42,9 +42,11 @@
   
   <!-- main menu wrapper starts -->
   <ul class="mainMenuWrapper">
-    <li><a href="/search">Size Search</a></li>
+    <li><a href="/search">Search</a></li>
     <li><a href="/history">Search History</a> </li>
+    <li><a href="/favorites">Favorites</a> </li>
     <li><a href="/about">About GlassSlipper</a> </li>
+    <li><a href="/login">Login</a> </li>
   </ul>
   <!-- main menu wrapper ends --> 
   
@@ -64,12 +66,15 @@
         <div class="portfolioOneItemInfoWrapper">
           <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
           <h1 id="resultSize">{{size}}</h1>
+          <center><a href="/favorites" class="link">Save to Favorites</a></center>
         </div>
         <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Results</a></div>
       </div>
       <!-- portfolio item ends --> 
+
     </div>
     <!-- portfolio wrapper ends -->  
+
   </div>
   <!-- page wrapper ends --> 
   

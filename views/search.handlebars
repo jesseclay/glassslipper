@@ -46,8 +46,8 @@
   <!-- main menu wrapper starts -->
   <ul class="mainMenuWrapper">
     <li class="currentPage"><a href="/search">Size Search</a></li>
-    <li><a href="/about">About</a> </li>
-    <li><a href="/history">History</a> </li>
+    <li><a href="/history">Search History</a> </li>
+    <li><a href="/about">About GlassSlipper</a> </li>
   </ul>
   <!-- main menu wrapper ends --> 
   
@@ -65,7 +65,7 @@
         <form class="form-horizontal shoeSearchForm" action="/results" method="get">
           <fieldset>          
               <div class="control-group">
-                  <label class="control-label shoeSearchLabel center">I Have:</label>
+                  <label class="control-label shoeSearchLabel">I Have:</label>
               <div class="controls">
                   <select name="brand">
                     {{#each brands}}
@@ -75,7 +75,7 @@
               </div>
               </div>
                 <div class="control-group">
-                    <label class="control-label shoeSearchLabel center">In Size:</label>
+                    <label class="control-label shoeSearchLabel">In Size:</label>
                 <div class="controls">
                     <select name="size">
                       {{#each sizes}}
@@ -85,7 +85,7 @@
                 </div>
                 </div>
               <div class="control-group">
-                  <label class="control-label shoeSearchLabel center">I Want:</label>
+                  <label class="control-label shoeSearchLabel">I Want:</label>
               <div class="controls">
                   <select name="brandToFind">
                     {{#each brands}}

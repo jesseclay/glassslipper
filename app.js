@@ -47,6 +47,7 @@ app.get('/results', searchResults.showResults);
 app.get('/history', history.view);
 app.get('/addShoe', addShoe.view);
 app.get('/about', about.view);
+app.get('/addShoe', addShoe.view); 
 
 // app.get('/test', test.view);
 // app.get('/project/:name/:image_url', project.viewProject);

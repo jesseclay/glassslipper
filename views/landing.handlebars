@@ -66,10 +66,13 @@
   <!-- slider wrapper ends --> 
   
   <!-- page wrapper starts -->
+  {{#if message}}
+     <div class="alert alert-danger"> {{ message }} </div>
+  {{/if}}
   <div class="pageWrapper homePageWrapper">
     <a href="/search" id="welcomeLink">
     <div class="pageContentWrapper welcomeWrapper">
-      <h3>Welcome to GlassSlipper!</h3>
+      <h3>Enter GlassSlipper</h3>
     </div>
     </a>
   </div>

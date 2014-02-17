@@ -2,7 +2,7 @@ var shoe_data = require('../shoe_stub_data.json');
 
 
 exports.landing = function(req, res) {
-  res.render('landing', {});
+  res.render('landing', { message: req.flash('log_out') });
 };
 
 

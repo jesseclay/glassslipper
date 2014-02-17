@@ -1,5 +1,5 @@
 {
-  "name": "IntroHCI",
+  "name": "glassslipper",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
 
@@ -17,7 +17,11 @@
     "express": "3.x",
     "express3-handlebars": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6",
+    "connect-flash" : "~0.1.1",   
+    "bcrypt-nodejs" : "latest"
   },
   "engines": {
     "node": "0.10.x"

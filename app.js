@@ -82,7 +82,7 @@ app.get('/signup', signup.view);
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 
-//app.post('/result', searchResults.addToFavs); 
+app.post('/result', searchResults.addToFavs); 
 
 function isLoggedIn(req, res, next) {
 	// if user is authenticated in the session, carry on 

@@ -10,7 +10,6 @@ var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
-var createAccount = require('./routes/createAccount');
 var searchResults = require('./routes/searchResults');
 var history = require('./routes/history');
 var favorites = require('./routes/favorites');
@@ -72,21 +71,26 @@ app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/results', searchResults.showResults);
 app.get('/history', history.view);
-app.get('/favorites', favorites.view);
+app.get('/favorites', isLoggedIn, function(req, res) {
+		res.render('favorites.handlebars', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
 app.get('/about', about.view);
 app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 
+//app.post('/result', searchResults.addToFavs); 
 
-/*function isLoggedIn(req, res, next) {
+function isLoggedIn(req, res, next) {
 	// if user is authenticated in the session, carry on 
 	if (req.isAuthenticated())
 		return next();
 	// if they aren't redirect them to the home page
 	res.redirect('/');
-}*/
+}
 
 // app.get('/test', test.view);
 // app.get('/project/:name/:image_url', project.viewProject);

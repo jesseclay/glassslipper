@@ -67,7 +67,11 @@
         <div class="portfolioOneItemInfoWrapper">
           <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
           <h1 id="resultSize">{{size}}</h1>
-          <center><a href="/favorites" class="link">Save to Favorites</a></center>
+          <form action="/result" method="post">
+            <input name="brand" value={{brand}} type="hidden"> </input>
+            <input name="size" value={{size}} type="hidden"> </input>
+            <center><input type="submit" value="Save to Favorites" id="addToFavs"></input></center>
+          </form>
         </div>
         <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Results</a></div>
       </div>

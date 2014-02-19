@@ -7,7 +7,7 @@ exports.view = function(req, res) {
 };
 
 exports.sendData = passport.authenticate('local-signup', {
-		successRedirect : '/', // redirect to the home page
+		successRedirect : '/favorites', // redirect to the favorites page
 		failureRedirect : '/signup', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 });

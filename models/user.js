@@ -2,12 +2,25 @@ var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
 // define the schema for our user model
-var userSchema = mongoose.Schema({
 
+var shoeSchema = mongoose.Schema({
+	brand: String, 
+	size: String, 
+}); 
+
+var searchSchema = mongoose.Schema({
+	brand_original: String, 
+	brand_result: String, 
+	size: String,
+});
+
+var userSchema = mongoose.Schema({
     local            : {
         email        : String,
         password     : String,
-    }
+    }, 
+    favorite_shoes : [shoeSchema],
+    history: [searchSchema],
 });
 
 // methods ======================

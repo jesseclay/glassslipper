@@ -58,7 +58,9 @@ app.use(app.router);
 
 
 //mongoose 
-mongoose.connect('mongodb://localhost/passport_local_mongoose');
+var local_uri = 'mongodb://localhost/glassslipper'; 
+var database_uri = process.env.MONGOLAB_URI || local_uri; 
+mongoose.connect(database_uri);
 
 // development only
 if ('development' == app.get('env')) {

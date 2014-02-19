@@ -1,6 +1,8 @@
+var local_uri = 'mongodb://localhost/test'; 
+var database_uri = process.env.MONGOLAB_URI || local_uri; 
 var MongoClient = require('mongodb').MongoClient
     , format = require('util').format;
-MongoClient.connect('mongodb://127.0.0.1:27017/test', function (err, db) {
+MongoClient.connect(database_uri, function (err, db) {
     if (err) {
         throw err;
     } else {

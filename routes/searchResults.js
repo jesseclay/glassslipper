@@ -30,7 +30,8 @@ exports.showResults = function(req, res) {
 
 exports.addToFavs = function(req, res) {
 	var user=req.user; 
- 	var brandToFind = req.body.brand;
+	if (user) {
+		var brandToFind = req.body.brand;
  	var size_result = req.body.size; 
  	var email_user = user.local.email; 
  	var user_id = user._id; 
@@ -49,4 +50,8 @@ exports.addToFavs = function(req, res) {
 		}); 
     	res.redirect('/favorites');
 	})
+	} else {
+		req.flash('loginMessage', 'You need to login first!'); 
+    	res.redirect('/login'); 
+	}
 }; 

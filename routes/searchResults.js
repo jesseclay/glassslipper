@@ -2,9 +2,23 @@ var shoe_data = require('../shoe_stub_data.json');
 var User       		= require('../models/user');
 
 exports.showResults = function(req, res) {
+  var user = req.user; 
   var brand = req.query.brand;
   var size = req.query.size;
   var brandToFind = req.query.brandToFind;
+  if (user) {
+  	var email_user = user.local.email; 
+  	User.update({'local.email': email_user}, { $push: { 'history': {'brand_original': brand, 'size': size, 'brand_result': brandToFind}}}, function(error) {
+  		if (error) return error;   
+		var cursor = User.findOne({'local.email':email_user}, function(err, user) {
+			if(err) 
+				return done(err); 
+			if (user) {
+				console.log(user); 
+			}
+		});
+	});  
+  }; 
 
   res.render('result', {
     'brand': brand,
@@ -20,8 +34,10 @@ exports.addToFavs = function(req, res) {
  	var size_result = req.body.size; 
  	var email_user = user.local.email; 
  	var user_id = user._id; 
+ 	//var lotsOfShoes = [{'brand':'something', 'size' : "numbers n shit here"}];
+
   	//res.send? local.email?
-	User.update({'local.email': email_user} , {$set: { $push: { 'favorite_shoes': { 'brand': brandToFind, 'size': size_result}}}} , function(error) {
+	User.update({'local.email': email_user} , { $push: { 'favorite_shoes': { 'brand': brandToFind, 'size': size_result}}} , function(error) {
 		if (error) return error;   
 		console.log('Added %s with size=%s', brandToFind, size_result);
 		var cursor = User.findOne({'local.email':email_user}, function(err, user) {
@@ -31,21 +47,6 @@ exports.addToFavs = function(req, res) {
 				console.log(user); 
 			}
 		}); 
-		/*var myDocument = cursor.hasNext() ? myCursor.next() : null;
-		if (myDocument) {
-    		print(tojson(myDocument));
-		}*/
-		/*var cursor = User.find({}, function(err, User) {
-			if(err) {
-				console.log("Errorrrr"); 
-			} else {
-				console.log(User); 
-				next(User); 
-			}
-		}
-		);*/
-		//});
-		//console.log(User.find(email_user)); 
     	res.redirect('/favorites');
 	})
 }; 

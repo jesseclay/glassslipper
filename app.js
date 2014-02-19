@@ -71,11 +71,12 @@ app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/results', searchResults.showResults);
 app.get('/history', history.view);
-app.get('/favorites', isLoggedIn, function(req, res) {
+/*app.get('/favorites', isLoggedIn, function(req, res) {
 		res.render('favorites.handlebars', {
 			user : req.user // get the user out of session and pass to template
 		});
-	});
+	});*/
+app.get('/favorites', favorites.view); 
 app.get('/about', about.view);
 app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 

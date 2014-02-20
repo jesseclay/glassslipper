@@ -1178,6 +1178,7 @@ input.errorSearchFormSubmitButton:hover {
 .contactTitle {
 	margin-bottom: 18px;
 	padding-top: 0px;
+	margin-left: 12%;
 }
 .contactForm .formFieldWrapper {
 	margin-bottom: 23px;
@@ -1218,7 +1219,8 @@ input.contactSubmitButton, input.contactSubmitButton:hover {
 	background-color: #26BA9A;
 	padding-left: 12px;
 	padding-right: 12px;
-	float: right;
+	margin-left: 10%;
+	width: 80%;
 	color: #fff;
 	border: none;
 }

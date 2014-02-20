@@ -63,21 +63,61 @@
     {{/if}}
   <div class="pageWrapper landingPageWrapper">
     <div class="container-fluid">
+      <!-- contact form wrapper starts -->
+      <div class="contactFormWrapper">
+        <h4 class="contactTitle">Login or Create an Account:</h4>
+        <!-- form success message wrapper starts -->
+        <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
+          <h4>Your message was received!</h4>
+          <p>Your message was successfully submitted to us, and we will contact you as soon as possible.</p>
+        </div>
+        <!-- form success message wrapper ends --> 
+        <!-- contact form starts -->
+        <form action="/login" method="post" class="contactForm" id="contactForm">
+          <fieldset>
+            <div class="formFieldWrapper">
+              <!-- <label for="contactNameField">Email:</label> -->
+              <input type="text" name="contactNameField" value="Email" class="contactField requiredField" id="contactNameField" data-placeholder=""/>
+            </div>
+            <div class="formFieldWrapper">
+              <!-- <label for="contactEmailField">Password:</label> -->
+              <input type="text" name="contactEmailField" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            </div>
+            <div class="formSubmitButtonErrorsWrapper"> 
+              <!-- form errors start --> 
+              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
+              <!-- form errors end -->
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Login" data-form-id="contactForm"/>
+            </div>
+            <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
+          </fieldset>
+        </form>
+        <!-- contact form ends --> 
+      </div>
+      <!-- contact form wrapper ends --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
-	<form class="form-horizontal shoeSearchForm" action="/login" method="post">
-		<div class="form-group">
-			<label>Email</label>
-			<input type="text" class="form-control" name="email">
-		</div>
-		<div class="form-group">
-			<label>Password</label>
-			<input type="password" class="form-control" name="password">
-		</div>
-
-		<button id="shoeSearchSubmit" class="btn btn-info btn-lg">Login</button>
-	</form>
-
 	<hr>
 
 	<p>Need an account? <a href="/signup">Signup</a></p>

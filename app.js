@@ -81,7 +81,7 @@ app.get('/history', history.view);
 app.get('/favorites', favorites.view); 
 app.get('/about', about.view);
 app.get('/addShoe', addShoe.view);
-app.get('/signup', login.view); 
+app.get('/signup', signup.view); 
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 

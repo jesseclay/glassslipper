@@ -123,6 +123,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.landing);
+app.post('/', index.postAddShoe); 
 app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/result', result.result);
@@ -138,8 +139,7 @@ app.post('/login',
                                    failureRedirect: '/login',
                                    failureFlash: true })
 );
-
-// app.post('/result', searchResults.addToFavs);
+app.post('/result', result.addToFavs);
 
 
 function isLoggedIn(req, res, next) {

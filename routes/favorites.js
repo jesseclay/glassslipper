@@ -10,7 +10,7 @@ exports.view = function(req, res) {
     }
     if(user) {
       res.render('favorites', {
-        'favs': shoes.favorite_shoes, 
+        'favorite_shoes': shoes.favorite_shoes, 
       });  
     }
     });

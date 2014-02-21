@@ -72,9 +72,7 @@
   <!-- slider wrapper ends --> 
   
   <!-- page wrapper starts -->
-  {{#if message}}
-     <div class="alert alert-danger"> {{ message }} </div>
-  {{/if}}
+ {{>alertMessage}}
   <div class="pageWrapper homePageWrapper">
     <a href="/search" id="welcomeLink">
     <div class="pageContentWrapper welcomeWrapper">

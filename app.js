@@ -139,7 +139,7 @@ app.post('/login',
                                    failureFlash: true })
 );
 
-app.post('/result', searchResults.addToFavs);
+// app.post('/result', searchResults.addToFavs);
 
 
 function isLoggedIn(req, res, next) {

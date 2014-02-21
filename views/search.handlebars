@@ -52,7 +52,7 @@
     <li><a href="/login">Login</a> </li>
     <li><a href="/about">About GlassSlipper</a> </li>
   </ul>
-  <!-- main menu wrapper ends --> 
+  <!-- main menu wrapper ends -->
   
   <!-- header wrapper starts -->
   <div class="headerOuterWrapper">
@@ -60,17 +60,19 @@
   </div>
   <!-- header wrapper ends -->
   
+
+
   <!-- page wrapper starts -->
   <!-- <div class="pageWrapper landingPageWrapper"> -->
     <div class="container-fluid">
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
-        <form class="form-horizontal shoeSearchForm" action="/results" method="get">
+        <form class="form-horizontal shoeSearchForm" action="/result" method="get">
           <fieldset>          
               <div class="control-group">
                   <label class="control-label shoeSearchLabel">I Have:</label>
               <div class="controls">
-                  <select name="brand">
+                  <select name="input_brand">
                     {{#each brands}}
                       <option value={{brand.name}}>{{brand.name}}</option>
                     {{/each}}
@@ -80,9 +82,9 @@
                 <div class="control-group">
                     <label class="control-label shoeSearchLabel">In Size:</label>
                 <div class="controls">
-                    <select name="size">
+                    <select name="input_size">
                       {{#each sizes}}
-                        <option value={{size}}>{{size}}</option>
+                          <option value={{size}} selected="selected">{{size}}</option>
                       {{/each}}
                     </select>
                 </div>
@@ -90,7 +92,7 @@
               <div class="control-group">
                   <label class="control-label shoeSearchLabel">I Want:</label>
               <div class="controls">
-                  <select name="brandToFind">
+                  <select name="output_brand">
                     {{#each brands}}
                       <option value="{{brand.name}}|{{brand.image_url}}">{{brand.name}}</option>
                     {{/each}}

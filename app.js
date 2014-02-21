@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars');
 // Routes
 var index = require('./routes/index');
 var login = require('./routes/login');
-var searchResults = require('./routes/searchResults');
+var result = require('./routes/result');
 var history = require('./routes/history');
 var favorites = require('./routes/favorites');
 var addShoe = require('./routes/addShoe');  
@@ -93,6 +93,16 @@ app.use(passport.session());
 app.use(app.router);
 app.use(express.bodyParser());
 
+handlebars.create({
+	helpers: {
+		defaultSize: function() {
+			//if (size == 7) {
+        	//	return true;
+    		//}
+    		return true;		
+		}
+	}
+});
 
 //passsport stuff 
 //var Account = require('./models/account');
@@ -115,7 +125,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.landing);
 app.get('/login', login.view);
 app.get('/search', index.search);
-app.get('/results', searchResults.results);
+app.get('/result', result.result);
 app.get('/history', history.view);
 app.get('/favorites', favorites.view); 
 app.get('/about', about.view);
@@ -123,14 +133,13 @@ app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 
 app.get('/logout', logout.logout);
 
-// app.post('/login', login.loginOrSignup);
 app.post('/login',
   passport.authenticate('local', { successRedirect: '/',
                                    failureRedirect: '/login',
                                    failureFlash: true })
 );
 
-app.post('/result', searchResults.addToFavs); 
+app.post('/result', searchResults.addToFavs);
 
 
 function isLoggedIn(req, res, next) {

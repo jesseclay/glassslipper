@@ -16,7 +16,7 @@ exports.view = function(req, res) {
         'hist': hist.history, 
       });  
     });
-  }else {
+  } else {
     req.flash('loginMessage', 'You need to login first!'); 
     res.redirect('/login'); 
   }

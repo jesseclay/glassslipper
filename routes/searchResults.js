@@ -1,30 +1,37 @@
-var shoe_data = require('../shoe_stub_data.json');
-var User       		= require('../models/user');
+<<<<<<< HEAD
+var shoe_matches = require('../shoe_matches.json');
+var shoe_catalog = require('../shoe_catalog.json');
+var User         = require('../models/user');
 
 exports.showResults = function(req, res) {
   var user = req.user; 
-  var brand = req.query.brand;
-  var size = req.query.size;
-  var brandToFind = req.query.brandToFind;
+  var brand1 = req.query.brand;
+  var size1 = req.query.size;
+  var brand2 = req.query.brandToFind.split('|');
+  var brand2_name = brandToFind[0];
+  var brand2_image_url = brandToFind[1];
+  shoe_matches_key = [brand2_name, brand2_image_url].join(',')
+  var size2 = shoe_matches[shoe_matches_key];
+
   if (user) {
-  	var email_user = user.local.email; 
-  	User.update({'local.email': email_user}, { $push: { 'history': {'brand_original': brand, 'size': size, 'brand_result': brandToFind}}}, function(error) {
-  		if (error) return error;   
-		var cursor = User.findOne({'local.email':email_user}, function(err, user) {
-			if(err) 
-				return done(err); 
-			if (user) {
-				console.log(user); 
-			}
-		});
-	});  
+    var email_user = user.local.email; 
+    User.update({'local.email': email_user}, { $push: { 'history': {'brand_original': brand, 'size': size, 'brand_result': brandToFind}}}, function(error) {
+      if (error) return error;   
+      var cursor = User.findOne({'local.email':email_user}, function(err, user) {
+        if(err) 
+          return done(err); 
+        if (user) {
+          console.log(user); 
+        }
+      });
+    });  
   }; 
 
   res.render('result', {
-    'brand': brand,
-    'size': size,
-    'image_url' : '/images/brands/bearpaw.png',
-    'all_brands': shoe_data["shoe_brands"]
+    'brand': brand2_name,
+    'size': size2,
+    'image_url': brand2_image_url,
+    'all_brands': shoe_catalog["shoe_brands"]
   });
 };
 

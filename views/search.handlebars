@@ -72,7 +72,7 @@
               <div class="controls">
                   <select name="brand">
                     {{#each brands}}
-                      <option value={{brand}}>{{brand}}</option>
+                      <option value={{brand}}>{{brand.name}}</option>
                     {{/each}}
                   </select>
               </div>
@@ -92,7 +92,7 @@
               <div class="controls">
                   <select name="brandToFind">
                     {{#each brands}}
-                      <option value={{brand}}>{{brand}}</option>
+                      <option value="{{brand.name}}|{{brand.image_url}}">{{brand.name}}</option>
                     {{/each}}
                   </select>
               </div>

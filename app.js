@@ -49,6 +49,16 @@ app.use(passport.session());
 app.use(app.router);
 // app.use(express.bodyParser());
 
+handlebars.create({
+	helpers: {
+		defaultSize: function() {
+			//if (size == 7) {
+        	//	return true;
+    		//}
+    		return true;		
+		}
+	}
+});
 
 //passsport stuff 
 //var Account = require('./models/account');

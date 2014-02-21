@@ -12,7 +12,6 @@ exports.result = function(req, res) {
   var shoe_matches_key = input_brand + ',' + Number(input_size).toFixed(1);
   // currently takes the first element in this array, ultimately want to avg
   var matches = shoe_matches[shoe_matches_key];
-  console.log("hello" + matches);
   if (matches) {
     var output_size = matches[output_brand_name];
     if (output_size) {

@@ -8,7 +8,7 @@ exports.view = function(req, res) {
 //pass in the arrays
   User.findOne({'local.email':email_user}, 'history', function(err, hist) {
     if (err) {
-      console.log(err);  
+      console.log(err);   
     }
       //var favoriteShoes = user.favorite_shoes; 
       console.log("here is where shoes should be:" + hist); 

@@ -66,8 +66,8 @@
   <div class="portfolioTwoPageWrapper"> 
     <center><h3> Your Search History: </h3></center>
     {{#each hist}}
-      <p>Your searched brand: {{brand_original}}</p>
-      <p> Brand you converted to: {{brand_result}}</p>
+      <p>Your searched brand: <img class="replayImage" src={{original_image_url}}></p>
+      <p> Brand you converted to: <img class="replayImage" src={{result_image_url}}></p>
       <p> Your converted size: {{size}}</p>
     {{/each}}
     <!-- portfolio wrapper starts 

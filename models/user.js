@@ -6,12 +6,15 @@ var bcrypt   = require('bcrypt-nodejs');
 var shoeSchema = mongoose.Schema({
 	brand: String, 
 	size: String, 
+    image_url: String,
 }); 
 
 var searchSchema = mongoose.Schema({
 	brand_original: String, 
 	brand_result: String, 
 	size: String,
+    original_image_url: String,
+    result_image_url: String,
 });
 
 var userSchema = mongoose.Schema({

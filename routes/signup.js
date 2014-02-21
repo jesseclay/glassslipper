@@ -1,4 +1,4 @@
-var passport = require('passport');
+	var passport = require('passport');
 require('../config/passport')(passport); 
 
 exports.view = function(req, res) {

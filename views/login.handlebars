@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GlassSlipper Shoe Search</title>
+<title>Login</title>
 <!-- meta tags start -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
@@ -18,8 +18,6 @@
 <!-- Google fonts end -->
 
 <!-- CSS files start -->
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
@@ -32,7 +30,6 @@
 
 <!-- JavaScript files start -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
- <script src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
@@ -40,7 +37,7 @@
 <!-- JavaScript files end -->
 </head>
 <body>
-<!-- website wrapper starts -->
+	<!-- website wrapper starts -->
 <div class="websiteWrapper landingWrapper"> 
   
   <!-- main menu wrapper starts -->
@@ -61,36 +58,71 @@
   <!-- header wrapper ends -->
   
   <!-- page wrapper starts -->
+    {{#if message}}
+     <div class="alert alert-danger"> {{ message }} </div>
+    {{/if}}
   <div class="pageWrapper landingPageWrapper">
     <div class="container-fluid">
+      <!-- contact form wrapper starts -->
+      <div class="contactFormWrapper">
+        <h4 class="contactTitle">Login or Create an Account:</h4>
+        <!-- form success message wrapper starts -->
+        <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
+          <h4>Your message was received!</h4>
+          <p>Your message was successfully submitted to us, and we will contact you as soon as possible.</p>
+        </div>
+        <!-- form success message wrapper ends --> 
+        <!-- contact form starts -->
+        <form action="/login" method="post" class="contactForm" id="contactForm">
+          <fieldset>
+            <div class="formFieldWrapper">
+              <!-- <label for="contactNameField">Email:</label> -->
+              <input type="text" name="contactNameField" value="Email" class="contactField requiredField" id="contactNameField" data-placeholder=""/>
+            </div>
+            <div class="formFieldWrapper">
+              <!-- <label for="contactEmailField">Password:</label> -->
+              <input type="text" name="contactEmailField" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            </div>
+            <div class="formSubmitButtonErrorsWrapper"> 
+              <!-- form errors start --> 
+              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
+              <!-- form errors end -->
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Login" data-form-id="contactForm"/>
+            </div>
+            <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
+          </fieldset>
+        </form>
+        <!-- contact form ends --> 
+      </div>
+      <!-- contact form wrapper ends --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
-        <form class="form-horizontal shoeSearchForm" action="/search" method="post">
-          <fieldset>          
-            <form>
-              <div class="control-group">
-                  <label class="control-label shoeSearchLabel">Username</label>
-              <div class="controls">
-                  <center><input type="text" name="username"></center>
-              </div>
-              </div>
-                <div class="control-group">
-                    <label class="control-label shoeSearchLabel">Password</label>
-                <div class="controls">
-                  <center><input type="password" name="password"></center>
-                </div>
-                </div>
-              </form>
+	<hr>
 
-            </fieldset>
-            <input type="submit" id="shoeSearchSubmit" class="btn btn-info btn-lg" value="Login"><br><br>
-            <center>New user? <a href="/createAccount" id="link">Create an account!</a></center>
-        </form>
-      </div>
-    </div>
-    </div>
-  </div>
-  <!-- page wrapper ends --> 
+	<p>Need an account? <a href="/signup">Signup</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+   <!-- page wrapper ends --> 
   
   <!-- footer wrapper starts -->
   <div class="footerWrapper landingFooterWrapper"> 
@@ -101,4 +133,3 @@
 <!-- website wrapper ends -->
 </body>
 </html>
-

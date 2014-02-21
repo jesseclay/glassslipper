@@ -1,3 +1,21 @@
+var User       		= require('../models/user');
+
 exports.view = function(req, res) {
-  res.render('favorites'); 
-}
+	var user = req.user; 
+  if(user) {
+      var email_user = user.local.email; 
+    User.findOne({'local.email':email_user}, 'favorite_shoes', function(err, shoes) {
+    if (err) {
+      console.log(err);  
+    }
+    if(user) {
+      res.render('favorites', {
+        'favs': shoes.favorite_shoes, 
+      });  
+    }
+    });
+  } else {
+    req.flash('loginMessage', 'You need to login first!'); 
+    res.redirect('/login'); 
+  }
+} 

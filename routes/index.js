@@ -2,7 +2,7 @@ var shoe_data = require('../shoe_catalog.json');
 
 
 exports.landing = function(req, res) {
-  res.render('landing', {});
+  res.render('landing', { message: req.flash('log_out') });
 };
 
 exports.search = function(req, res) {

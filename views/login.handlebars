@@ -58,6 +58,7 @@
   <!-- header wrapper ends -->
   <!-- page wrapper starts -->
     {{#if message}}
+    message
      <div class="alert alert-danger"> {{ message }} </div>
     {{/if}}
   <div class="pageWrapper">
@@ -76,11 +77,11 @@
           <fieldset>
             <!-- <div class="formFieldWrapper"> -->
               <!-- <label for="contactNameField">Email:</label> -->
-              <input type="text" name="contactEmailField" value="Email" class="contactField requiredField" id="contactEmailField" data-placeholder=""/>
+              <input type="text" name="email" value="Email" class="contactField requiredField" id="contactEmailField" data-placeholder=""/>
             <!-- </div> -->
             <!-- <div class="formFieldWrapper"> -->
               <!-- <label for="contactEmailField">Password:</label> -->
-              <input type="password" name="passwordField" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+              <input type="password" name="password" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
             <!-- </div> -->
             <div class="formSubmitButtonErrorsWrapper"> 
               <!-- form errors start --> 

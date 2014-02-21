@@ -65,12 +65,12 @@
     <div class="container-fluid">
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
-        <form class="form-horizontal shoeSearchForm" action="/results" method="get">
+        <form class="form-horizontal shoeSearchForm" action="/result" method="get">
           <fieldset>          
               <div class="control-group">
                   <label class="control-label shoeSearchLabel">I Have:</label>
               <div class="controls">
-                  <select name="brand">
+                  <select name="input_brand">
                     {{#each brands}}
                       <option value={{brand.name}}>{{brand.name}}</option>
                     {{/each}}
@@ -80,7 +80,7 @@
                 <div class="control-group">
                     <label class="control-label shoeSearchLabel">In Size:</label>
                 <div class="controls">
-                    <select name="size">
+                    <select name="input_size">
                       {{#each sizes}}
                         <option value={{size}}>{{size}}</option>
                       {{/each}}
@@ -90,7 +90,7 @@
               <div class="control-group">
                   <label class="control-label shoeSearchLabel">I Want:</label>
               <div class="controls">
-                  <select name="brandToFind">
+                  <select name="output_brand">
                     {{#each brands}}
                       <option value="{{brand.name}}|{{brand.image_url}}">{{brand.name}}</option>
                     {{/each}}

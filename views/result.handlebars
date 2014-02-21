@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GlassSlipper Search Results</title>
+<title>GlassSlipper Search Result</title>
 <!-- meta tags start -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
@@ -66,15 +66,15 @@
       <div class="portfolioOneItemWrapper"> <a href="singleProject.html" class="portfolioOneItemImageWrapper"><img src={{image_url}} alt=""/></a>
         <div class="portfolioOneItemInfoWrapper">
           <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
-          <script> console.log(size); </script>
-          <h1 id="resultSize">{{size}}</h1>
+          <script> console.log({{shoe_matches_key}}); </script>
+          <h1 id="resultSize">{{output_size}}</h1>
           <form action="/result" method="post">
             <input name="brand" value={{brand}} type="hidden"> </input>
-            <input name="size" value={{size}} type="hidden"> </input>
+            <input name="size" value={{output_size}} type="hidden"> </input>
             <center><input type="submit" value="Save to Favorites" id="addToFavs"></input></center>
           </form>
         </div>
-        <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Results</a></div>
+        <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About GlassSlipper</a></div>
       </div>
       <!-- portfolio item ends --> 
 

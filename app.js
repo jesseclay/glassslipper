@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
-var searchResults = require('./routes/searchResults');
+var result = require('./routes/result');
 var history = require('./routes/history');
 var favorites = require('./routes/favorites');
 var addShoe = require('./routes/addShoe');  
@@ -71,7 +71,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.landing);
 app.get('/login', login.view);
 app.get('/search', index.search);
-app.get('/results', searchResults.results);
+app.get('/result', result.result);
 app.get('/history', history.view);
 /*app.get('/favorites', isLoggedIn, function(req, res) {
 		res.render('favorites.handlebars', {
@@ -85,7 +85,7 @@ app.get('/signup', signup.view);
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 
-app.post('/result', searchResults.addToFavs); 
+app.post('/result', result.addToFavs); 
 
 function isLoggedIn(req, res, next) {
 	// if user is authenticated in the session, carry on 

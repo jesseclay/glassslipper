@@ -35,6 +35,8 @@ input[type="text"], input[type="password"] {
 	color: #999;
 	font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	border-radius: 3px;
+	width: 80%;
+	margin-left: 5%;
 }
 textarea {
 	transition: background-color 0.3s;
@@ -1167,7 +1169,7 @@ input.errorSearchFormSubmitButton:hover {
 	padding-left: 12px;
 	padding-right: 12px;
 	background-color: #fff;
-	padding-top: 23px;
+	padding-top: 40px;
 	box-shadow: 0px 3px 0px rgba(0,0,0,0.09);
 	border-radius: 6px;
 	margin-bottom: 3px;
@@ -1381,7 +1383,7 @@ input.fieldHasError, textarea.fieldHasError {
 	padding-left: 24px;
 	padding-right: 24px;
 	background-color: #21a387;
-	height: 54px;
+	height: 36px;
 	overflow: visible;
 	border-top: 3px solid #1d9077;
 }

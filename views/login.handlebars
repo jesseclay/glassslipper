@@ -38,7 +38,7 @@
 </head>
 <body>
 	<!-- website wrapper starts -->
-<div class="websiteWrapper landingWrapper"> 
+<div class="websiteWrapper"> 
   
   <!-- main menu wrapper starts -->
   <ul class="mainMenuWrapper">
@@ -56,16 +56,15 @@
     <div class="headerWrapper"> <a href="" class="mainMenuButton"><span>Menu</span></a></div>
   </div>
   <!-- header wrapper ends -->
-  
   <!-- page wrapper starts -->
     {{#if message}}
      <div class="alert alert-danger"> {{ message }} </div>
     {{/if}}
-  <div class="pageWrapper landingPageWrapper">
-    <div class="container-fluid">
+  <div class="pageWrapper">
+    <!-- <div class="container-fluid"> -->
       <!-- contact form wrapper starts -->
       <div class="contactFormWrapper">
-        <h4 class="contactTitle">Login or Create an Account:</h4>
+        <h4 class="contactTitle">Login or Create an Account</h4>
         <!-- form success message wrapper starts -->
         <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
           <h4>Your message was received!</h4>
@@ -75,14 +74,14 @@
         <!-- contact form starts -->
         <form action="/login" method="post" class="contactForm" id="contactForm">
           <fieldset>
-            <div class="formFieldWrapper">
+            <!-- <div class="formFieldWrapper"> -->
               <!-- <label for="contactNameField">Email:</label> -->
-              <input type="text" name="contactNameField" value="Email" class="contactField requiredField" id="contactNameField" data-placeholder=""/>
-            </div>
-            <div class="formFieldWrapper">
+              <input type="text" name="contactEmailField" value="Email" class="contactField requiredField" id="contactEmailField" data-placeholder=""/>
+            <!-- </div> -->
+            <!-- <div class="formFieldWrapper"> -->
               <!-- <label for="contactEmailField">Password:</label> -->
-              <input type="text" name="contactEmailField" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
-            </div>
+              <input type="password" name="passwordField" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            <!-- </div> -->
             <div class="formSubmitButtonErrorsWrapper"> 
               <!-- form errors start --> 
               <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
@@ -95,13 +94,7 @@
         <!-- contact form ends --> 
       </div>
       <!-- contact form wrapper ends --> 
-
-    <div class="row" id="shoeSearchArea">
-      <div class="col-xs-12">
-	<hr>
-<!-- 
-	<p>Need an account? <a href="/signup">Signup</a></p>
-	<p>Or go <a href="/">home</a>.</p> -->
+  </div>
    <!-- page wrapper ends --> 
   
   <!-- footer wrapper starts -->

@@ -6,16 +6,16 @@ exports.results = function(req, res) {
   var user = req.user; 
   var brand1 = req.query.brand;
   var size1 = req.query.size;
-  console.log(brandToFind);
+  console.log(req.query.brandToFind);
   var brand2 = req.query.brandToFind.split('|');
-  var brand2_name = brandToFind[0];
-  var brand2_image_url = brandToFind[1];
+  var brand2_name = brand2[0];
+  var brand2_image_url = brand2[1];
   shoe_matches_key = [brand2_name, brand2_image_url].join(',')
   var size2 = shoe_matches[shoe_matches_key];
 
   if (user) {
     var email_user = user.local.email; 
-    User.update({'local.email': email_user}, { $push: { 'history': {'brand_original': brand, 'size': size, 'brand_result': brandToFind}}}, function(error) {
+    User.update({'local.email': email_user}, { $push: { 'history': {'brand_original': brand, 'size': size, 'brand_result': brand2}}}, function(error) {
       if (error) return error;   
       var cursor = User.findOne({'local.email':email_user}, function(err, user) {
         if(err) 

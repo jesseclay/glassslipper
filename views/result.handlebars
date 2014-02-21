@@ -66,6 +66,7 @@
       <div class="portfolioOneItemWrapper"> <a href="singleProject.html" class="portfolioOneItemImageWrapper"><img src={{image_url}} alt=""/></a>
         <div class="portfolioOneItemInfoWrapper">
           <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
+          <script> console.log(size); </script>
           <h1 id="resultSize">{{size}}</h1>
           <form action="/result" method="post">
             <input name="brand" value={{brand}} type="hidden"> </input>

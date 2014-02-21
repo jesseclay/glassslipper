@@ -41,14 +41,19 @@
 <div class="websiteWrapper"> 
   
   <!-- main menu wrapper starts -->
-  <ul class="mainMenuWrapper">
+  {{#if user}}
+    {{>menu_logged_in}}
+  {{else}}
+    {{>menu_logged_out}}
+  {{/if}}
+  <!--<ul class="mainMenuWrapper">
     <li><a href="/search">Search</a></li>
     <li><a href="/history">Search History</a> </li>
     <li><a href="/favorites">Favorites</a> </li>
     <li><a href="/addShoe">Recommend a Brand</a></li>
     <li><a href="/login">Login</a> </li>
     <li class="currentPage"><a href="/about">About GlassSlipper</a> </li>
-  </ul>
+  </ul>-->
   <!-- main menu wrapper ends --> 
   
   <!-- header wrapper starts -->

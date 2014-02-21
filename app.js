@@ -71,7 +71,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.landing);
 app.get('/login', login.view);
 app.get('/search', index.search);
-app.get('/results', searchResults.showResults);
+app.get('/results', searchResults.results);
 app.get('/history', history.view);
 /*app.get('/favorites', isLoggedIn, function(req, res) {
 		res.render('favorites.handlebars', {

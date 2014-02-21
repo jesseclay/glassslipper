@@ -1,12 +1,12 @@
-<<<<<<< HEAD
 var shoe_matches = require('../shoe_matches.json');
 var shoe_catalog = require('../shoe_catalog.json');
 var User         = require('../models/user');
 
-exports.showResults = function(req, res) {
+exports.results = function(req, res) {
   var user = req.user; 
   var brand1 = req.query.brand;
   var size1 = req.query.size;
+  console.log(brandToFind);
   var brand2 = req.query.brandToFind.split('|');
   var brand2_name = brandToFind[0];
   var brand2_image_url = brandToFind[1];

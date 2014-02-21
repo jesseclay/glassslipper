@@ -87,7 +87,7 @@ blockquote {
 }
 .alertBoxInfo {
 	background-image: url(../images/common/alertBoxInfoBg-x2.png);
-	background-size: 16px 16px;
+	background-size: 10px 16px;
 }
 .alertBoxButton {
 	background-image: url(../images/common/alertBoxButtonBg-x2.png);

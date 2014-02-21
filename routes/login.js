@@ -6,8 +6,8 @@ exports.view = function(req, res) {
 };
 
 
-exports.loginOrSignup = passport.authenticate('local-login', {
-		successRedirect : '/login', // redirect to the secure profile section
+exports.sendData = passport.authenticate('local-login', {
+		successRedirect : '/favorites', // redirect to the secure profile section
 		failureRedirect : '/login', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 });

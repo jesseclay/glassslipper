@@ -47,7 +47,7 @@
     <li><a href="/search">Search</a></li>
     <li><a href="/history">Search History</a> </li>
     <li><a href="/favorites">Favorites</a> </li>
-    <li> <a href="/addShoe">Recommend a Brand</a></li>
+    <li><a href="/addShoe">Recommend a Brand</a></li>
     <li class="currentPage"><a href="/login">Login</a> </li>
     <li><a href="/about">About GlassSlipper</a> </li>
   </ul>-->
@@ -59,14 +59,19 @@
   </div>
   <!-- header wrapper ends -->
   <!-- page wrapper starts -->
-    {{#if message}}
-     <div class="alert alert-danger"> {{ message }} </div>
-    {{/if}}
+
+
   <div class="pageWrapper">
+    {{#if message}}
+      <div class="alertBox alertBoxInfo">
+        <p>{{ message }}</p>
+        <a href class="alertBoxButton"></a>
+      </div>
+    {{/if}}
     <!-- <div class="container-fluid"> -->
       <!-- contact form wrapper starts -->
       <div class="contactFormWrapper">
-        <h4 class="contactTitle">Login or Create an Account</h4>
+        <h4 class="contactTitle">Login To Your Account</h4>
         <!-- form success message wrapper starts -->
         <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
           <h4>Your message was received!</h4>
@@ -88,7 +93,7 @@
               <!-- form errors start --> 
               <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
               <!-- form errors end -->
-              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Get Started or Login" data-form-id="contactForm"/>
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Login" data-form-id="contactForm"/>
             </div>
             <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
           </fieldset>

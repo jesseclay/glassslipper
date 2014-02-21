@@ -1,0 +1,150 @@
+{
+  "shoe_sizes": [
+   {"size": "4"},
+   {"size": "4.5"},
+   {"size": "5"},
+   {"size": "5.5"},
+   {"size": "6"},
+   {"size": "6.5"},
+   {"size": "7"},
+   {"size": "7.5"},
+   {"size": "8"},
+   {"size": "8.5"},
+   {"size": "9"},
+   {"size": "9.5"},
+   {"size": "10"},
+   {"size": "10.5"},
+   {"size": "11"},
+   {"size": "11.5"},
+   {"size": "12"}
+  ],
+  
+  "shoe_brands": [
+    { "brand": {
+      "name": "Adidas",
+      "image_url": "/images/brands/adidas.svg"}},
+    { "brand": {
+      "name": "Asics",
+      "image_url": "/images/brands/asics.png"}},
+    { "brand": {
+      "name": "Alfani",
+      "image_url": "/images/brands/alfani.jpg"}},  
+    { "brand": {
+      "name": "Aquazurra",
+      "image_url": "/images/brands/aquazurra.jpg"}},
+    { "brand": {
+      "name": "BEARPAW",
+      "image_url": "/images/brands/bearpaw.png"}},
+    { "brand": {
+      "name": "Bottega Veneta",
+      "image_url": "/images/brands/bottega_veneta.jpg"}},
+    { "brand": {
+      "name": "Bruno Magli",
+      "image_url": "/images/brands/bruno_magli.jpg"}},
+    { "brand": {
+      "name": "Burberry",
+      "image_url": "/images/brands/burberry.png"}},
+    { "brand": {
+      "name": "Charlotte Olympia",
+      "image_url": "/images/brands/charlotte_olympia.jpg"}},
+    { "brand": {
+      "name": "Chloe",
+      "image_url": "/images/brands/chloe.jpeg"}},
+    { "brand": {
+      "name": "Christian Louboutin",
+      "image_url": "/images/brands/christian_louboutin.jpg"}},
+    { "brand": {
+      "name": "Clarks",
+      "image_url": "/images/brands/clarks.jpg"}},
+    { "brand": {
+      "name": "Coach",
+      "image_url": "/images/brands/coach.jpg"}},
+    { "brand": {
+      "name": "Converse",
+      "image_url": "/images/brands/converse.png"}},
+    { "brand": {
+      "name": "Crocs",
+      "image_url": "/images/brands/crocs.jpg"}},
+    { "brand": {
+      "name": "Dr. Martens",
+      "image_url": "/images/brands/dr_martens.jpg"}},
+    { "brand": {
+      "name": "Frye",
+      "image_url": "/images/brands/frye.jpg"}},
+    { "brand": {
+      "name": "Gucci",
+      "image_url": "/images/brands/gucci.jpg"}},
+    { "brand": {
+      "name": "Guess",
+      "image_url": "/images/brands/guess.jpg"}},
+    { "brand": {
+      "name": "Jimmy Choo",
+      "image_url": "/images/brands/jimmy_choo.png"}},
+    { "brand": {
+      "name": "Louis Vuitton",
+      "image_url": "/images/brands/louis_vuitton.svg"}},
+    { "brand": {
+      "name": "Manolo Blahnik",
+      "image_url": "/images/brands/manolo_blahnik.jpg"}},
+    { "brand": {
+      "name": "Marc Fisher",
+      "image_url": "/images/brands/marc_fisher.svg"}},
+    { "brand": {
+      "name": "Miu Miu",
+      "image_url": "/images/brands/miu_miu.jpg"}},
+    { "brand": {
+      "name": "Nike",
+      "image_url": "/images/brands/nike.svg"}},
+    { "brand": {
+      "name": "Oscar de la Renta",
+      "image_url": "/images/brands/oscar_de_la_renta.jpg"}},
+    { "brand": {
+      "name": "Prada",
+      "image_url": "/images/brands/prada.jpg"}},
+    { "brand": {
+      "name": "Reebok",
+      "image_url": "/images/brands/reebok.jpg"}},
+    { "brand": {
+      "name": "Repetto",
+      "image_url": "/images/brands/repetto.jpg"}},
+    { "brand": {
+      "name": "Salvatore Ferragamo",
+      "image_url": "/images/brands/salvatore_ferragamo.jpg"}},
+    { "brand": {
+      "name": "Saint Laurent",
+      "image_url": "/images/brands/saint_laurent.png"}},
+    { "brand": {
+      "name": "Sergio Rossi",
+      "image_url": "/images/brands/sergio_rossi.jpg"}},
+    { "brand": {
+      "name": "Steve Madden",
+      "image_url": "/images/brands/steve_madden.png"}},
+    { "brand": {
+      "name": "Stuart Weitzman",
+      "image_url": "/images/brands/stuart_weitzman.jpg"}},
+    { "brand": {
+      "name": "Superga",
+      "image_url": "/images/brands/superga.jpg"}},
+    { "brand": {
+      "name": "Toms",
+      "image_url": "/images/brands/toms.jpg"}},
+    { "brand": {
+      "name": "Tory Burch",
+      "image_url": "/images/brands/tory_burch.png"}},
+    { "brand": {
+      "name": "Uggs",
+      "image_url": "/images/brands/uggs.jpg"}},
+    { "brand": {
+      "name": "Valentino",
+      "image_url": "/images/brands/valentino.jpg"}},
+    { "brand": {
+      "name": "Vans",
+      "image_url": "/images/brands/vans.jpg"}},
+    { "brand": {
+      "name": "Versace",
+      "image_url": "/images/brands/versace.png"}},
+    { "brand": {
+      "name": "Walter Steiger",
+      "image_url": "/images/brands/walter_steiger.jpg"}}
+  ]
+}

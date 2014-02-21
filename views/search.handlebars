@@ -82,7 +82,7 @@
               <div class="controls">
                   <select name="input_brand">
                     {{#each brands}}
-                      <option value={{brand.name}}>{{brand.name}}</option>
+                      <option value="{{brand.name}}|{{brand.image_url}}">{{brand.name}}</option>
                     {{/each}}
                   </select>
               </div>

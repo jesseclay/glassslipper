@@ -44,14 +44,16 @@
 <div class="websiteWrapper landingWrapper"> 
   
   <!-- main menu wrapper starts -->
-  <ul class="mainMenuWrapper">
+  {{> menu_logged_in}}
+
+  <!--<ul class="mainMenuWrapper">
     <li> <a href="/search">Search</a></li>
     <li> <a href="/history">Search History</a> </li>
     <li class="currentPage"><a href="/favorites">Favorites</a> </li>
     <li> <a href="/addShoe">Recommend a Brand</a></li>
     <li><a href="/login">Login</a> </li>
     <li> <a href="/about">About GlassSlipper</a> </li>
-  </ul>
+  </ul>-->
   <!-- main menu wrapper ends --> 
   
   <!-- header wrapper starts -->
@@ -65,7 +67,7 @@
     <center><h3> Your Favorite Shoes: </h3></center>
     <!-- portfolio wrapper starts -->
       <!-- portfolio item starts  -->
-      {{#each favs}}
+      {{#each favorite_shoes}}
           <h3> Brand: {{brand}} </h3>
           <h3> Your size is: {{size}} </h3>
       {{/each}}

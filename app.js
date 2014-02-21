@@ -68,6 +68,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.landing);
+app.post('/', index.postAddShoe); 
 app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/result', result.result);
@@ -85,6 +86,18 @@ app.get('/logout', logout.logout);
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 
 app.post('/result', result.addToFavs); 
+// =======
+// app.get('/signup', signup.view); 
+// app.get('/logout', logout.logout);
+
+// app.post('/login',
+//   passport.authenticate('local', { successRedirect: '/',
+//                                    failureRedirect: '/login',
+//                                    failureFlash: true })
+// );
+// app.post('/result', result.addToFavs);
+
+
 
 function isLoggedIn(req, res, next) {
   // if user is authenticated in the session, carry on 

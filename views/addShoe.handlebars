@@ -44,14 +44,19 @@
 <div class="websiteWrapper landingWrapper"> 
   
   <!-- main menu wrapper starts -->
-  <ul class="mainMenuWrapper">
+  {{#if user}}
+    {{>menu_logged_in}}
+  {{else}}
+    {{>menu_logged_out}}
+  {{/if}}
+  <!--<ul class="mainMenuWrapper">
     <li><a href="/search">Search</a></li>
     <li><a href="/history">Search History</a> </li>
     <li><a href="/favorites">Favorites</a> </li>
     <li><a href="/addShoe">Recommend a Brand</a></li>
     <li><a href="/login">Login</a> </li>
     <li><a href="/about">About GlassSlipper</a> </li>
-  </ul>
+  </ul>-->
   <!-- main menu wrapper ends --> 
   
   <!-- header wrapper starts -->
@@ -65,7 +70,7 @@
     <div class="container-fluid">
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
-        <form class="form-horizontal shoeSearchForm" action="/" method="get" onsubmit="return confirm('Thanks for submitting, we got it! :)');">
+        <form class="form-horizontal shoeSearchForm" action="/" method="post">
           <fieldset>          
               <div class="control-group">
                   <label class="control-label shoeSearchLabel">Add the Brand:</label>

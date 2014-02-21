@@ -10,7 +10,7 @@ exports.view = function(req, res) {
     }
     if(user) {
       res.render('favorites', {
-        'favs': shoes.favorite_shoes, 
+        'favorite_shoes': shoes.favorite_shoes, 
       });  
     }
     });
@@ -18,4 +18,8 @@ exports.view = function(req, res) {
     req.flash('loginMessage', 'You need to login first!'); 
     res.redirect('/login'); 
   }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 278ab7242b20dc2ac820cd2656719b4fe532f502

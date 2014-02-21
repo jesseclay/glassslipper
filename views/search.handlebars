@@ -49,6 +49,7 @@
   {{else}}
     {{>menu_logged_out}}
   {{/if}}
+
   <!--
   <ul class="mainMenuWrapper">
     <li class="currentPage"><a href="/search">Search</a></li>
@@ -73,6 +74,7 @@
     <div class="container-fluid">
     <div class="row" id="shoeSearchArea">
       <div class="col-xs-12">
+        {{>alertMessage}}
         <form class="form-horizontal shoeSearchForm" action="/result" method="get">
           <fieldset>          
               <div class="control-group">

@@ -55,12 +55,7 @@
 
 
   <div class="pageWrapper">
-    {{#if message}}
-      <div class="alertBox alertBoxInfo">
-        <p>{{ message }}</p>
-        <a href class="alertBoxButton"></a>
-      </div>
-    {{/if}}
+    {{>alertMessage}}
     <!-- <div class="container-fluid"> -->
       <!-- contact form wrapper starts -->
       <div class="contactFormWrapper">

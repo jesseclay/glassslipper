@@ -114,3 +114,37 @@ module.exports = function(passport) {
     }));
 
 };
+
+
+
+// passport.use(new LocalStrategy(
+//     {usernameField: 'email',
+//   passwordField: 'password'},
+//   function(email, password, done) {
+//     // search for user in DB
+//     User = models.user;
+//     User.findOne({ "email": email }, function(err, user) {
+//       var hash = bcrypt.hashSync(password);
+//       if (user) {
+//         // valid email entered, check password
+//         if (!bcrypt.compareSync(password, hash)) {
+//           return done(null, false, { message: 'Incorrect password.' });
+//         }
+//         return done(null, user);
+//       }
+//       if (err) { return done(err); }
+//       // if no user with that email then create a new user
+//       if (!user) {
+//         var hashedPassword = bcrypt.hashSync(password);
+//         newUser = new User({"email": email, "passwordHash": hashedPassword});
+//         newUser.save(function(err) {
+//         if(err) {
+//             console.log(err);
+//         } else {
+//           return done(null, newUser, { message: 'Account Created!' });
+//          }
+//       });
+//       }
+//     });
+//   }
+// ));

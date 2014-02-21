@@ -11,7 +11,7 @@
 
 <!-- favorite icon starts -->
 <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
-<!-- favorite icon ends --> 
+<!-- favorite icon ends -->
 
 <!-- Google fonts start -->
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
@@ -37,13 +37,17 @@
 <!-- JavaScript files end -->
 </head>
 <body>
-	<!-- website wrapper starts -->
-<div class="websiteWrapper landingWrapper"> 
+  <!-- website wrapper starts -->
+<div class="websiteWrapper"> 
   
   <!-- main menu wrapper starts -->
   <ul class="mainMenuWrapper">
-    <li class="currentPage"><a href="/search">Size Search</a></li>
-    <li><a href="/about">About</a> </li>
+    <li><a href="/search">Search</a></li>
+    <li><a href="/history">Search History</a> </li>
+    <li><a href="/favorites">Favorites</a> </li>
+    <li><a href="/addShoe">Recommend a Brand</a></li>
+    <li class="currentPage"><a href="/login">Signup</a> </li>
+    <li><a href="/about">About GlassSlipper</a> </li>
   </ul>
   <!-- main menu wrapper ends --> 
   
@@ -52,29 +56,58 @@
     <div class="headerWrapper"> <a href="" class="mainMenuButton"><span>Menu</span></a></div>
   </div>
   <!-- header wrapper ends -->
-  
   <!-- page wrapper starts -->
-  {{#if message}}
-     <div class="alert alert-danger"> {{ message }} </div>
-  {{/if}}
-  <div class="pageWrapper landingPageWrapper">
-    <div class="container-fluid">
-    <div class="row" id="shoeSearchArea">
-      <div class="col-xs-12">
-	<form class="form-horizontal shoeSearchForm" action="/signup" method="post">
-		<div class="form-group">
-			<label>Email</label>
-			<input type="text" class="form-control" name="email">
-		</div>
-		<div class="form-group">
-			<label>Password</label>
-			<input type="password" class="form-control" name="password">
-		</div>
 
-		<button id="shoeSearchSubmit" class="btn btn-info btn-lg">Signup</button>
-	</form>
 
-	<hr>
-
-	<p>Already have an account? <a href="/login">Login</a></p>
-	<p>Or go <a href="/">home</a>.</p>
+  <div class="pageWrapper">
+    {{#if message}}
+      <div class="alertBox alertBoxInfo">
+        <p>{{ message }}</p>
+        <a href class="alertBoxButton"></a>
+      </div>
+    {{/if}}
+    <!-- <div class="container-fluid"> -->
+      <!-- contact form wrapper starts -->
+      <div class="contactFormWrapper">
+        <h4 class="contactTitle">Create an Account</h4>
+        <!-- form success message wrapper starts -->
+        <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
+          <h4>Your message was received!</h4>
+          <p>Your message was successfully submitted to us, and we will contact you as soon as possible.</p>
+        </div>
+        <!-- form success message wrapper ends --> 
+        <!-- contact form starts -->
+        <form action="/login" method="post" class="contactForm" id="contactForm">
+          <fieldset>
+            <!-- <div class="formFieldWrapper"> -->
+              <!-- <label for="contactNameField">Email:</label> -->
+              <input type="text" name="email" value="Email" class="contactField requiredField" id="contactEmailField" data-placeholder=""/>
+            <!-- </div> -->
+            <!-- <div class="formFieldWrapper"> -->
+              <!-- <label for="contactEmailField">Password:</label> -->
+              <input type="password" name="password" value="Password" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            <!-- </div> -->
+            <div class="formSubmitButtonErrorsWrapper"> 
+              <!-- form errors start --> 
+              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
+              <!-- form errors end -->
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Get Started" data-form-id="contactForm"/>
+            </div>
+            <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
+          </fieldset>
+        </form>
+        <!-- contact form ends --> 
+      </div>
+      <!-- contact form wrapper ends --> 
+  </div>
+   <!-- page wrapper ends --> 
+  
+  <!-- footer wrapper starts -->
+  <div class="footerWrapper landingFooterWrapper"> 
+  </div>
+  <!-- footer wrapper ends --> 
+  
+</div>
+<!-- website wrapper ends -->
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -8,7 +7,6 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
-// Routes
 var index = require('./routes/index');
 var login = require('./routes/login');
 var result = require('./routes/result');
@@ -16,60 +14,17 @@ var history = require('./routes/history');
 var favorites = require('./routes/favorites');
 var addShoe = require('./routes/addShoe');  
 var about = require('./routes/about');
-var login = require('./routes/login'); 
-var logout = require('./routes/logout'); 
-var signup = require('./routes/signup'); 
 
-// Database
+// Example route
+// var user = require('./routes/user');
 var mongoose = require('mongoose');
-var configDB = require('./config/database.js');
-var models = require('./models');
+var configDB = require('./config/database.js'); 
 var flash = require('connect-flash'); 
-
-// User Login & Password
-var bcrypt = require('bcrypt-nodejs');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
-passport.use(new LocalStrategy(
-	{usernameField: 'email',
-  passwordField: 'password'},
-  function(email, password, done) {
-    // search for user in DB
-    User = models.user;
-    User.findOne({ "email": email }, function(err, user) {
-      var hash = bcrypt.hashSync(password);
-      if (user) {
-        // valid email entered, check password
-        if (!bcrypt.compareSync(password, hash)) {
-          return done(null, false, { message: 'Incorrect password.' });
-        }
-        return done(null, user);
-      }
-      if (err) { return done(err); }
-      // if no user with that email then create a new user
-      if (!user) {
-        var hashedPassword = bcrypt.hashSync(password);
-      	newUser = new User({"email": email, "passwordHash": hashedPassword});
-        newUser.save(function(err) {
-        if(err) {
-        	console.log(err);
-        } else {
-          return done(null, newUser, { message: 'Account Created!' });
-         }
-      });
-      }
-    });
-  }
-));
-
-// checks the user entered password against the salted and hashed password
-
-// function checkPassword(user, password) {
-// 	bcrypt.compare(password, user.password, function(err, res) {
-//     return res; // res returns correct password or incorrect password
-//   });
-// }
+var login= require('./routes/login'); 
+var logout = require('./routes/logout'); 
+var signup = require('./routes/signup'); 
 
 var app = express();
 
@@ -91,18 +46,8 @@ app.use(express.logger());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
-app.use(express.bodyParser());
+// app.use(express.bodyParser());
 
-handlebars.create({
-	helpers: {
-		defaultSize: function() {
-			//if (size == 7) {
-        	//	return true;
-    		//}
-    		return true;		
-		}
-	}
-});
 
 //passsport stuff 
 //var Account = require('./models/account');
@@ -127,27 +72,26 @@ app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/result', result.result);
 app.get('/history', history.view);
+/*app.get('/favorites', isLoggedIn, function(req, res) {
+    res.render('favorites.handlebars', {
+      user : req.user // get the user out of session and pass to template
+    });
+  });*/
 app.get('/favorites', favorites.view); 
 app.get('/about', about.view);
 app.get('/addShoe', addShoe.view);
-app.get('/signup', signup.view); 
-app.get('/logout', logout.logout);
-
-app.post('/login',
-  passport.authenticate('local', { successRedirect: '/',
-                                   failureRedirect: '/login',
-                                   failureFlash: true })
-);
-
-// app.post('/result', searchResults.addToFavs);
-
+app.get('/signup', login.view); 
+app.get('/logout', logout.logout); 
+app.post('/signup', signup.sendData); 
+app.post('/login', login.sendData); 
+app.post('/result', result.addToFavs); 
 
 function isLoggedIn(req, res, next) {
-	// if user is authenticated in the session, carry on 
-	if (req.isAuthenticated())
-		return next();
-	// if they aren't redirect them to the home page
-	res.redirect('/');
+  // if user is authenticated in the session, carry on 
+  if (req.isAuthenticated())
+    return next();
+  // if they aren't redirect them to the home page
+  res.redirect('/');
 }
 
 // app.get('/test', test.view);

@@ -18,8 +18,5 @@ exports.view = function(req, res) {
     req.flash('loginMessage', 'You need to login first!'); 
     res.redirect('/login'); 
   }
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> 278ab7242b20dc2ac820cd2656719b4fe532f502
+

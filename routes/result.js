@@ -18,7 +18,7 @@ exports.result = function(req, res) {
       output_size = output_size[0];
     }
   } else {
-    output_size = 10;
+    output_size = input_size;
   }
 
   if (user) {

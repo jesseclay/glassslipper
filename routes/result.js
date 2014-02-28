@@ -46,8 +46,8 @@ exports.result = function(req, res) {
 
 exports.alternateResult = function(req, res) {
   var user = req.user; 
-  var input_brand_name = req.query.want;
-  var output_brand_name = req.query.have;
+  var output_brand_name = req.query.want;
+  var input_brand_name = req.query.have;
   // var input_brand = req.query.want
   // var input_brand = req.query.input_brand.split('|');
   // var input_brand_name = input_brand[0];

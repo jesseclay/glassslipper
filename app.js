@@ -79,13 +79,13 @@ app.get('/history', history.view);
     });
   });*/
 app.get('/favorites', favorites.view); 
+app.post('/favorites', favorites.addToFavs); 
 app.get('/about', about.view);
 app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
 app.post('/login', login.sendData); 
-app.post('/result', result.addToFavs); 
 // =======
 // app.get('/signup', signup.view); 
 // app.get('/logout', logout.logout);

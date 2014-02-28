@@ -18,4 +18,4 @@ exports.search = function(req, res) {
 exports.postAddShoe = function(req, res) {
 	req.flash('log_out', 'Thanks for submitting your brand, we got it :)'); 
 	res.redirect('/'); 
-}
+};

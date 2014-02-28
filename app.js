@@ -72,6 +72,7 @@ app.post('/', index.postAddShoe);
 app.get('/login', login.view);
 app.get('/search', index.search);
 app.get('/result', result.result);
+app.get('/alternateResult', result.alternateResult);
 app.get('/history', history.view);
 /*app.get('/favorites', isLoggedIn, function(req, res) {
     res.render('favorites.handlebars', {

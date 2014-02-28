@@ -8,7 +8,7 @@ exports.landing = function(req, res) {
 };
 
 exports.search = function(req, res) {
-  res.render('search', {
+  res.render('alternateSearch', {
     'sizes': shoe_data["shoe_sizes"],
     'brands': shoe_data["shoe_brands"],
     'user': req.user 

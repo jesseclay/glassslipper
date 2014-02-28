@@ -35,8 +35,9 @@ input[type="text"], input[type="password"] {
 	color: #999;
 	font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	border-radius: 3px;
-	width: 80%;
-	margin-left: 5%;
+	width: 60%;
+	margin-left: 20%;
+	height: 32px;
 }
 textarea {
 	transition: background-color 0.3s;

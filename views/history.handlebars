@@ -46,52 +46,53 @@
   <!-- main menu wrapper starts -->
   {{> menu_logged_in}}
 
-<!--  <ul class="mainMenuWrapper">
-    <li> <a href="/search">Search</a></li>
-    <li class="currentPage"> <a href="/history">Search History</a> </li>
-    <li><a href="/favorites">Favorites</a> </li>
-    <li> <a href="/addShoe">Recommend a Brand</a></li>
-    <li><a href="/login">Login</a> </li>
-    <li> <a href="/about">About GlassSlipper</a> </li>
-  </ul>-->
-  <!-- main menu wrapper ends --> 
-  
   <!-- header wrapper starts -->
   <div class="headerOuterWrapper">
     <div class="headerWrapper"> <a href="" class="mainMenuButton"><span>Menu</span></a></div>
   </div>
-  <!-- header wrapper ends -->
-
+    <!-- page wrapper starts -->
+  {{#if hist}}
+    <div class="portfolioTwoPageWrapper">
+    <div class="titleBox"> 
+      <h1>Search History</h1>
+    </div>
+<!-- portfolio wrapper starts -->
+    {{#each hist}}
+      <div class="portfolioTwoItemWrapper">
+        <!-- <img class="replayImage" src={{image_url}}> -->
+        <a class="portfolioTwoItemImageWrapper">
+          <img src={{result_image_url}} alt=""/>
+        </a>
+        <div class="favoritesTwoItemWrapper">
+          <p class="portfolioTwoItemTitle">Your Size: {{size}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  {{else}}
+    <div class="pageWrapper faqPageWrapper"> 
+      
+      <!-- page content wrapper starts -->
+      <div class="pageContentWrapper infoBox"> 
+        <!-- page title starts -->
+        <h1>No history yet!</h1>
+        <!-- page title ends -->
+        <p>What are you waiting for?</p>
+        <a href="/search" class="searchButton"><h5>Start Searching Now!</h5></a>
+      </div>
+    </div>
+  {{/if}}  
+  <!-- footer wrapper starts -->
+  <div class="footerWrapper"> 
+  </div>
   <!-- page wrapper starts -->
-  <div class="portfolioTwoPageWrapper"> 
+<!--   <div class="portfolioTwoPageWrapper"> 
     <center><h3> Your Search History: </h3></center>
     {{#each hist}}
       <p>Your searched brand: <img class="replayImage" src={{original_image_url}}></p>
       <p> Brand you converted to: <img class="replayImage" src={{result_image_url}}></p>
       <p> Your converted size: {{size}}</p>
-    {{/each}} 
-<!--     <div class="portfolioTwoWrapper"> 
-      <div class="portfolioTwoItemWrapper">
-        <a href="singleProject.html" class="portfolioTwoItemImageWrapper">
-          
-        </a>
-        <div class="portfolioTwoItemInfoWrapper">
-          <h4 class="portfolioTwoItemTitle">shoe1</h4>
-        </div>
-      </div>   -->
-    
-  </div>
-  <!-- page wrapper ends --> 
-  
-  <!-- footer wrapper starts -->
-  <div class="footerWrapper"> 
-    <!-- footer social icons wrapper starts -->
-    <div class="footerSocialIconsWrapper"> </div>
-    <!-- footer social icons wrapper ends --> 
-  </div>
-  <!-- footer wrapper ends --> 
-  
+    {{/each}}  -->
 </div>
-<!-- website wrapper ends -->
 </body>
 </html>

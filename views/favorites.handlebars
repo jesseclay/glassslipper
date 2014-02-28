@@ -45,16 +45,6 @@
   
   <!-- main menu wrapper starts -->
   {{> menu_logged_in}}
-
-  <!--<ul class="mainMenuWrapper">
-    <li> <a href="/search">Search</a></li>
-    <li> <a href="/history">Search History</a> </li>
-    <li class="currentPage"><a href="/favorites">Favorites</a> </li>
-    <li> <a href="/addShoe">Recommend a Brand</a></li>
-    <li><a href="/login">Login</a> </li>
-    <li> <a href="/about">About GlassSlipper</a> </li>
-  </ul>-->
-  <!-- main menu wrapper ends --> 
   
   <!-- header wrapper starts -->
   <div class="headerOuterWrapper">
@@ -63,31 +53,51 @@
   <!-- header wrapper ends -->
 
   <!-- page wrapper starts -->
-  <div class="portfolioTwoPageWrapper"> 
-    <center><h3> Your Favorite Shoes: </h3></center>
-    <!-- portfolio wrapper starts -->
-      <!-- portfolio item starts  -->
-      {{#each favorite_shoes}}
-          <img class="replayImage" src={{image_url}}>
-          <h3> Your size is: {{size}} </h3>
-      {{/each}}
-
-      <!-- portfolio wrapper starts {{#each favs}}
-      <div class="portfolioTwoItemWrapper">
-        <a class="portfolioTwoItemImageWrapper">
-          <img src="images/content/small-1-1.jpg" alt=""/>
-        </a>
-        <div class="portfolioTwoItemInfoWrapper">
-          <p class="portfolioTwoItemTitle">Brand: {{favorite_shoes.0.brand}}</p>
-          <p class='portfolioTwoItemTitle'>Your size is: {{favorite_shoes.0.size}}</p>
-        </div>
+  {{#if favorite_shoes}}
+  <!-- <div class="pageWrapper faqPageWrapper">  -->
+      
+      <!-- page content wrapper starts -->
+      <div class="titleBox"> 
+        <h1>Your Favorite Shoes</h1>
       </div>
-      {{/each}} -->
+      <!-- page content wrapper ends --> 
+      
+  <!-- </div> -->
+    <div class="portfolioTwoPageWrapper">
+<!-- portfolio wrapper starts -->
+      {{#each favorite_shoes}}
+        <div class="portfolioTwoItemWrapper">
+          <!-- <img class="replayImage" src={{image_url}}> -->
+          <a class="portfolioTwoItemImageWrapper">
+            <img src={{image_url}} alt=""/>
+          </a>
+          <div class="favoritesTwoItemWrapper">
+            <p class="portfolioTwoItemTitle">Your Size: {{size}}</p>
+          </div>
+        </div>
+      {{/each}}
 
       <!-- portfolio item ends --> 
   </div>
   <!-- page wrapper ends --> 
-  
+  {{else}}
+    <div class="pageWrapper faqPageWrapper"> 
+      
+      <!-- page content wrapper starts -->
+      <div class="pageContentWrapper infoBox"> 
+        <!-- page title starts -->
+        <h1>No favorites yet!</h1>
+        <!-- page title ends -->
+        <p>What are you waiting for?</p>
+        <a href="/search" class="searchButton"><h5>Start Searching Now!</h5></a>
+        <!-- <div class="textBreak"></div> -->
+        <!-- faqs start --> 
+        <!-- accordion wrapper starts -->
+      </div>
+      <!-- page content wrapper ends --> 
+      
+    </div>
+  {{/if}}
   <!-- footer wrapper starts -->
   <div class="footerWrapper"> 
     <!-- footer social icons wrapper starts -->

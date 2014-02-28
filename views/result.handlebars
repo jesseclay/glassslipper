@@ -56,26 +56,35 @@
   
   <!-- page wrapper starts -->
   <div class="pageWrapper portfolioOnePageWrapper"> 
-    
     <!-- portfolio wrapper starts -->
     <div class="portfolioOneWrapper"> 
-      <!-- portfolio item starts  -->
       <div class="portfolioOneItemWrapper"> <div class="portfolioOneItemImageWrapper"><img src={{image_url}} alt=""/></div>
-        <div class="portfolioOneItemInfoWrapper">
-          <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
-          <h1 id="resultSize">{{output_size}}</h1>
-          <form action="/result" method="post">
-            <input name="brand" value="{{brand}}" type="hidden"> </input>
-            <input name="size" value="{{output_size}}" type="hidden"> </input>
-            <input name="image_url" value="{{image_url}}" type="hidden"> </input>
-            <center><input type="submit" value="Save to Favorites" id="addToFavs"></input></center>
-          </form>
+      {{#if output_size}}
+      <!-- portfolio item starts  -->
+          <div class="portfolioOneItemInfoWrapper">
+            <h3 class="portfolioOneItemTitle"><b>You Are a Size</b></h3>
+            <h1 id="resultSize">{{output_size}}</h1>
+            <form action="/result" method="post">
+              <input name="brand" value="{{brand}}" type="hidden"> </input>
+              <input name="size" value="{{output_size}}" type="hidden"> </input>
+              <input name="image_url" value="{{image_url}}" type="hidden"> </input>
+              <center><input type="submit" value="Save to Favorites" id="addToFavs"></input></center>
+            </form>
+          </div>
+          <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Us</a></div>
         </div>
-        <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Us</a></div>
-      </div>
-      <!-- portfolio item ends --> 
-
+        <!-- portfolio item ends --> 
+      {{else}}
+          <div class="portfolioOneItemInfoWrapper">
+            <h1 class="portfolioOneItemTitle"><b>Uh-oh!!!</b></h1>
+            <h3>We're still in BETA and don't have your size on file :(</h3>
+            <h5>Try searching for something more common?</h5>
+          </div>
+          <div class="portfolioOneItemButtonsWrapper"><a href="/search" class="portfolioOneExpandButton">Search Again</a><a href="/about" class="portfolioOneDetailsButton">About Us</a></div>
+        </div>
+      {{/if}}
     </div>
+
     <!-- portfolio wrapper ends -->  
 
   </div>

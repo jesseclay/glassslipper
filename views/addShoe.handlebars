@@ -58,26 +58,35 @@
   <!-- header wrapper ends -->
   
   <!-- page wrapper starts -->
-  <div class="pageWrapper landingPageWrapper">
-    <div class="container-fluid">
-    <div class="row" id="shoeSearchArea">
-      <div class="col-xs-12">
-        <h2> Didn't find the brand you were looking for? Recommend the brand to us here! </h2>
-        <form class="form-horizontal shoeSearchForm" action="/" method="post">
-          <fieldset>          
-              <div class="control-group">
-                  <center><input type="text" class="form-control" id="brand" placeholder="Description" name="description"></center>
-            </fieldset>
-            <input type="submit" id="shoeSearchSubmit" class="btn btn-info btn-lg" value="Add">
-        </form>
+  <div class="pageWrapper faqPageWrapper"> 
+    
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper" style="text-align:center;"> 
+      <!-- page title starts -->
+      <h3 class="pageTitle">Suggest A Brand</h3>
+      <!-- page title ends -->
+      <p>We're missing your favorite brand?</p>
+      <p>Bummer, sorry about that.</p>
+      <p>Tell us what it is and we'll try to add it!</p>
+      
+      <form class="form-horizontal shoeSearchForm shoeSuggestForm" action="/" method="post">
+        <!-- <fieldset>           -->
+          <!-- <div class="control-group"> -->
+            <input type="text" class="form-control shoeSuggestTextBox" placeholder="Brand" name="description">
+          <!-- </div> -->
+        <!-- </fieldset> -->
+        <input type="submit" id="shoeSuggestSubmit" class="btn btn-info btn-lg" value="Suggest">
+      </form>
+      <!-- faqs start --> 
       </div>
     </div>
-    </div>
+    <!-- page content wrapper ends --> 
+    
   </div>
   <!-- page wrapper ends --> 
   
   <!-- footer wrapper starts -->
-  <div class="footerWrapper landingFooterWrapper"> 
+  <div class="footerWrapper"> 
   </div>
   <!-- footer wrapper ends --> 
   

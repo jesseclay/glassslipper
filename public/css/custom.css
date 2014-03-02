@@ -31,6 +31,12 @@
   width: 112px;
 }
 
+#shoeSuggestSubmit {
+  /*margin-top: 0px;*/
+  height: 44px;
+  width: 112px;
+}
+
 #link{
   color: white;
 }
@@ -59,6 +65,14 @@
   margin: 20px 24px 20px 24px;
   box-shadow: 0px 3px 0px rgba(0,0,0,0.09);
   border-radius: 6px;
+  text-align: center;
+}
+
+.shoeSuggestForm {
+  padding-top: 8px;
+}
+
+.shoeSuggestTextBox {
   text-align: center;
 }
 

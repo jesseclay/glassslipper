@@ -71,6 +71,7 @@ app.get('/', index.landing);
 app.post('/', index.postAddShoe); 
 app.get('/login', login.view);
 app.get('/search', index.search);
+app.get('/alternateSearch', index.alternateSearch); 
 app.get('/result', result.result);
 app.get('/alternateResult', result.alternateResult);
 app.get('/history', history.view);

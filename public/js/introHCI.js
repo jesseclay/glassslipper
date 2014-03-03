@@ -9,5 +9,14 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// add any functionality and listeners you want here
+	/* 2 measurements: 
+	* a) time from entry to submit
+	* b) number of submits in a session
+	*/
+	ga("send", "event", "pageLoad", "init");
+	$(".shoeSearchForm").submit(recordSubmit);
+
+	function recordSubmit() {
+		ga("send", "event", "searchSubmit", "submit");
+	}
 }

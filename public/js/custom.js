@@ -233,7 +233,7 @@ jQuery(document).ready(function($){
 	// lightbox functions start
 	function lightbox(){
 		
-		$('.portfolioFilterableExpandButton, .singleProjectExpandButton').colorbox({
+		$('.portfolioFilterableExpandButton, .singleProjectExpandButton, .shoeBrandExpand').colorbox({
 		
 			maxWidth: windowWidth,
 			initialWidth: lightboxInitialWidth,

@@ -1,7 +1,7 @@
 var shoe_matches = require('../shoe_matches.json');
 var shoe_catalog = require('../shoe_catalog.json');
 var User = require('../models/user');
-    var shoe_brands = [
+  var shoe_brands = [
       "Adidas",
       "Asics", 
       "Alfani", 
@@ -96,7 +96,9 @@ exports.alternateResult = function(req, res) {
   var output_brand_name = req.query.want;
   var input_brand_name = req.query.have;
 
-  if (shoe_brands.indexOf("output_brand_name") < 0) {
+
+
+  if (shoe_brands.indexOf(output_brand_name) < 0) {
     req.flash('bad_brand', 'Please enter valid brands.');
     res.redirect('/alternateSearch')
   };

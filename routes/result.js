@@ -1,6 +1,51 @@
 var shoe_matches = require('../shoe_matches.json');
 var shoe_catalog = require('../shoe_catalog.json');
 var User = require('../models/user');
+    var shoe_brands = [
+      "Adidas",
+      "Asics", 
+      "Alfani", 
+      "Aquazurra", 
+      "BEARPAW", 
+      "Bottega Veneta", 
+      "Bruno Magli", 
+      "Burberry", 
+      "Charlotte Olympia", 
+      "Chloe", 
+      "Christian Louboutin", 
+      "Clarks", 
+      "Coach", 
+      "Converse", 
+      "Crocs", 
+      "Dr. Martens", 
+      "Frye", 
+      "Gucci", 
+      "Guess", 
+      "Jimmy Choo", 
+      "Louis Vuitton", 
+      "Manolo Blahnik",
+      "Marc Fisher", 
+      "Miu Miu", 
+      "Nike", 
+      "Oscar de la Renta", 
+      "Prada", 
+      "Reebok", 
+      "Repetto", 
+      "Salvatore Ferragamo", 
+      "Saint Laurent", 
+      "Sergio Rossi", 
+      "Steve Madden", 
+      "Stuart Weitzman", 
+      "Superga", 
+      "Toms", 
+      "Tory Burch", 
+      "Uggs", 
+      "Valentino", 
+      "Vans", 
+      "Versace", 
+      "Walter Steiger"
+    ];
+
 
 exports.result = function(req, res) {
   var user = req.user; 
@@ -45,9 +90,17 @@ exports.result = function(req, res) {
 };
 
 exports.alternateResult = function(req, res) {
+
+
   var user = req.user; 
   var output_brand_name = req.query.want;
   var input_brand_name = req.query.have;
+
+  if (shoe_brands.indexOf("output_brand_name") < 0) {
+    req.flash('bad_brand', 'Please enter valid brands.');
+    res.redirect('/alternateSearch')
+  };
+
   // var input_brand = req.query.want
   // var input_brand = req.query.input_brand.split('|');
   // var input_brand_name = input_brand[0];

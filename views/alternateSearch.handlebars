@@ -160,6 +160,11 @@
 //  ga('create', 'UA-48570724-1', {'cookieDomain': 'none'});
   ga('send', 'pageview');
 
+  var defaultSize = '7';
+  $("select option").filter(function() {
+      //may want to use $.trim in here
+      return $(this).text() == defaultSize;
+  }).prop('selected', true);
 </script>
 </body>
 </html>

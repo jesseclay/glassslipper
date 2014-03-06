@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google Analytics Content Experiment code -->
+<!-- Google Analytics Content Experiment code 2 -->
 <script>function utmx_section(){}function utmx(){}(function(){var
-k='82881101-0',d=document,l=d.location,c=d.cookie;
+k='82881101-2',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
 function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
 indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -53,6 +53,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <!-- JavaScript files end -->
+
 </head>
 <body>
 <!-- website wrapper starts -->
@@ -95,7 +96,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                 <div class="controls">
                     <select name="input_size">
                       {{#each sizes}}
-                          <option value={{size}} selected="selected">{{size}}</option>
+                          <option value={{size}} id="size">{{size}}</option>
                       {{/each}}
                     </select>
                 </div>
@@ -138,6 +139,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 //  ga('create', 'UA-48570724-1', {'cookieDomain': 'none'});
   ga('send', 'pageview');
 
+  var defaultSize = '7';
+  $("select option").filter(function() {
+      //may want to use $.trim in here
+      return $(this).text() == defaultSize;
+  }).prop('selected', true);
 </script>
 </body>
 </html>

@@ -6,6 +6,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var User = require('./models/user');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
@@ -46,7 +47,7 @@ app.use(express.logger());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
-// app.use(express.bodyParser());
+app.use(express.bodyParser());
 
 
 //passsport stuff 
@@ -87,6 +88,8 @@ app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
+//failure login URL parsing as well
+//normal login functionality
 app.post('/login', login.sendData); 
 // =======
 // app.get('/signup', signup.view); 

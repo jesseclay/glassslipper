@@ -77,7 +77,12 @@
             <!-- </div> -->
             <div class="formSubmitButtonErrorsWrapper"> 
               <!-- form errors start --> 
-              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
+              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span>
+              {{#if brandToFind}} 
+                <input type ="hidden" name="image" value={{image}}>
+                <input type ="hidden" name="brandToFind" value={{brandToFind}}>
+                <input type ="hidden" name="sizeResult" value={{sizeResult}}>
+              {{/if}}
               <!-- form errors end -->
               <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Login" data-form-id="contactForm"/>
               
@@ -87,7 +92,12 @@
           </fieldset>
         </form>
 
-        <FORM METHOD="LINK" ACTION="/signup">
+        <FORM METHOD="get" ACTION="/signup">
+            {{#if brandToFind}} 
+                <input type ="hidden" name="image" value={{image}}>
+                <input type ="hidden" name="brandToFind" value={{brandToFind}}>
+                <input type ="hidden" name="sizeResult" value={{sizeResult}}>
+              {{/if}}
             <INPUT TYPE="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" VALUE="Create Account">
         </FORM>
         <br/>

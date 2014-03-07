@@ -75,6 +75,11 @@
               <!-- form errors start --> 
               <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> 
               <!-- form errors end -->
+              {{#if brand}} 
+                <input type ="hidden" name="image" value={{image}}>
+                <input type ="hidden" name="brand" value={{brand}}>
+                <input type ="hidden" name="size" value={{size}}>
+              {{/if}}
               <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Get Started" data-form-id="contactForm"/>
             </div>
             <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />

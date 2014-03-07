@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>GlassSlipper Shoe Search</title>
+<title>GlassSlipper Shoe Search</title> 
 <!-- meta tags start -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
@@ -123,7 +123,7 @@
       <div class="col-xs-12">
         <form class="form-horizontal shoeSearchForm" action="/alternateResult" method="get">
               <!-- {{>alertMessage}} -->
-          <label>I have</label> <input type="text" name="have" class="shoeBrands" />
+          <label>I Have the Brand:</label> <input type="text" name="have" class="shoeBrands" />
           <div class="control-group">
             <label class="control-label">In Size</label>
             <div class="controls">
@@ -133,8 +133,9 @@
               {{/each}}
             </select>
           </div>
-          <label>I Want</label> <input type="text" name="want" class="shoeBrands" />
+          <label>I Want the Brand: </label> <input type="text" name="want" class="shoeBrands" />
           <input type="submit" id="shoeSearchSubmit" class="btn btn-info btn-lg" value="Size Me!">
+          <p class="hyperlink"> Didn't find your brand? <a href="/addShoe" style="color: blue"> Recommend it to us here </a> </p>
         </form>
       </div>
     </div>

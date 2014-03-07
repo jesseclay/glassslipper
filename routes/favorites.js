@@ -23,18 +23,16 @@ exports.view = function(req, res) {
 
 exports.addToFavs = function(req, res) {
   var user=req.user; 
-  if (user) {
-    var brandToFind = req.body.brand;
-    var size_result = req.body.size;
-    var image_url = req.body.image_url; 
+  var brandToFind = req.body.brand;
+  var sizeResult = req.body.size;
+  var image_url = req.body.image_url;
+  var search_result_arr = {"brandToFind" : brandToFind, "sizeResult": sizeResult, "image": image_url};
+  if (user) { 
     var email_user = user.local.email; 
     var user_id = user._id; 
-  //var lotsOfShoes = [{'brand':'something', 'size' : "numbers n shit here"}];
-  
-    //res.send? local.email?
-    User.update({'local.email': email_user} , { $push: { 'favorite_shoes': { 'brand': brandToFind, 'size': size_result, 'image_url': image_url}}} , function(error) {
+    User.update({'local.email': email_user} , { $push: { 'favorite_shoes': { 'brand': brandToFind, 'size': sizeResult, 'image_url': image_url}}} , function(error) {
       if (error) return error;   
-      console.log('Added %s with size=%s', brandToFind, size_result);
+      console.log('Added %s with size=%s', brandToFind, sizeResult);
       var cursor = User.findOne({'local.email':email_user}, function(err, user) {
         if(err) 
           return done(err); 
@@ -47,6 +45,6 @@ exports.addToFavs = function(req, res) {
     });
   } else {
     req.flash('loginMessage', 'You need to login first!'); 
-      res.redirect('/login'); 
+    res.render('login.handlebars', search_result_arr); 
   }
 }; 

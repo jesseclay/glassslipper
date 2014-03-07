@@ -76,6 +76,10 @@
   text-align: center;
 }
 
+.hyperlink{
+  color: white;
+}
+
 /*.favoritesTwoItemWrapper {
   margin-right: 36px;
   margin-bottom: 46px;

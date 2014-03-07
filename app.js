@@ -88,8 +88,6 @@ app.get('/addShoe', addShoe.view);
 app.get('/signup', signup.view); 
 app.get('/logout', logout.logout); 
 app.post('/signup', signup.sendData); 
-//failure login URL parsing as well
-//normal login functionality
 app.post('/login', login.sendData); 
 // =======
 // app.get('/signup', signup.view); 

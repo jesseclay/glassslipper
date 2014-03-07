@@ -123,10 +123,10 @@ module.exports = function(passport) {
 
             // all is well, return successful user
             if(brand) {
+                req.flash('postAddFavs', 'Saved to Favorites!'); 
                 User.update({'local.email': email} , { $push: { 'favorite_shoes': { 'brand': brand, 'size': size, 'image_url': image}}} , function(error) {
                 if (error) return error;   
                 console.log('Added %s with size=%s', brand, size);
-                req.flash('postAddFavs', 'Saved to Favorites!'); 
             }); 
             }
             return done(null, user);

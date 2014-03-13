@@ -71,7 +71,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.landing);
 app.post('/', index.postAddShoe); 
 app.get('/login', login.view);
-app.get('/search', index.alternateSearch);
+app.get('/search', index.search);
 app.get('/alternateSearch', index.alternateSearch); 
 app.get('/result', result.alternateResult);
 app.get('/alternateResult', result.alternateResult);
